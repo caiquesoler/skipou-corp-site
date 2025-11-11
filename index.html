@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skipou Corp - Uniformes Corporativos de Alto Padrão</title>
     <meta name="description" content="Uniformes corporativos de alto padrão com tecidos premium e caimento perfeito. 6 anos vestindo empresas de todo o Brasil.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zqh7xxz.css">
     <style>
         * {
             margin: 0;
@@ -25,7 +23,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'acumin-variable-concept', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--color-dark-gray);
             line-height: 1.6;
             overflow-x: hidden;
@@ -33,7 +31,7 @@
 
         /* Header */
         header {
-            background: var(--color-white);
+            background: #ffffff;
             padding: 1.5rem 5%;
             position: fixed;
             width: 100%;
@@ -55,6 +53,14 @@
             font-weight: 700;
             color: var(--color-black);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 24px;
+            width: auto;
+            display: block;
         }
 
         .cta-header {
@@ -77,8 +83,8 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-gray) 100%);
-            color: var(--color-white);
+            background: #f4f4f4;
+            color: var(--color-dark-gray);
             padding: 140px 5% 80px;
             text-align: center;
         }
@@ -94,23 +100,26 @@
             line-height: 1.2;
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
+            color: var(--color-dark-gray);
         }
 
         .hero p {
             font-size: clamp(1.1rem, 2vw, 1.3rem);
-            color: var(--color-light-gray);
+            color: var(--color-gray);
             margin-bottom: 2.5rem;
             font-weight: 300;
         }
 
         .badge {
             display: inline-block;
-            background: rgba(255,255,255,0.1);
+            background: var(--color-white);
             padding: 0.5rem 1.5rem;
             border-radius: 50px;
             font-size: 0.9rem;
             margin-top: 2rem;
             font-weight: 500;
+            color: var(--color-dark-gray);
+            border: 1px solid var(--color-light-gray);
         }
 
         .cta-primary {
@@ -133,6 +142,34 @@
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
         }
 
+        /* Galeria de Imagens Hero */
+        .hero-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+
+        .hero-gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #e0e0e0;
+        }
+
+        .hero-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
         /* Section Styles */
         section {
             padding: 80px 5%;
@@ -148,7 +185,7 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 1rem;
-            color: var(--color-black);
+            color: var(--color-dark-gray);
         }
 
         .section-subtitle {
@@ -194,7 +231,7 @@
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 0.8rem;
-            color: var(--color-black);
+            color: var(--color-dark-gray);
         }
 
         .card p {
@@ -211,7 +248,7 @@
         .stats {
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
-            color: var(--color-black);
+            color: var(--color-dark-gray);
             margin-bottom: 1rem;
         }
 
@@ -263,7 +300,7 @@
         .step-number {
             min-width: 60px;
             height: 60px;
-            background: var(--color-black);
+            background: var(--color-dark-gray);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -278,7 +315,7 @@
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            color: var(--color-black);
+            color: var(--color-dark-gray);
         }
 
         .step-content p {
@@ -288,7 +325,7 @@
 
         /* Condições */
         .condicoes {
-            background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-gray) 100%);
+            background: var(--color-gray);
             color: var(--color-white);
         }
 
@@ -407,6 +444,7 @@
             z-index: 999;
             transition: all 0.3s;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .whatsapp-float:hover {
@@ -420,6 +458,10 @@
                 padding: 1rem 5%;
             }
 
+            .logo-img {
+                height: 19px;
+            }
+
             .cta-header {
                 padding: 0.6rem 1.2rem;
                 font-size: 0.85rem;
@@ -427,6 +469,16 @@
 
             .hero {
                 padding: 120px 5% 60px;
+            }
+
+            .hero-gallery {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin: 2rem auto 0;
+            }
+            
+            .hero-gallery-item {
+                aspect-ratio: 16/9;
             }
 
             section {
@@ -480,8 +532,10 @@
     <!-- Header -->
     <header>
         <div class="header-content">
-            <a href="#" class="logo">SKIPOU CORP</a>
-            <a href="#contato" class="cta-header">
+            <a href="#" class="logo">
+                <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/logo-skipoucorp-monocromia-positiva-2.png" alt="Skipou Corp" class="logo-img">
+            </a>
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-header">
                 <span>💬</span> Solicitar Orçamento
             </a>
         </div>
@@ -492,10 +546,22 @@
         <div class="hero-content">
             <h1>O uniforme que valoriza sua equipe e eleva sua marca</h1>
             <p>Uniformes corporativos de alto padrão com tecidos premium, caimento perfeito e acabamento impecável. 6 anos vestindo empresas de todo o Brasil.</p>
-            <a href="#contato" class="cta-primary">
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary">
                 <span>💬</span> Solicitar Orçamento no WhatsApp
             </a>
-            <div class="badge">✓ Mais de 20 mil peças produzidas</div>
+            
+            <!-- Galeria de Imagens -->
+            <div class="hero-gallery">
+                <div class="hero-gallery-item">
+                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/1.png" alt="Equipe usando uniformes Skipou Corp">
+                </div>
+                <div class="hero-gallery-item">
+                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/2.png" alt="Profissionais com uniformes corporativos">
+                </div>
+                <div class="hero-gallery-item">
+                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/3.png" alt="Evento corporativo com uniformes">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -614,7 +680,7 @@
                 <div class="step">
                     <div class="step-number">7</div>
                     <div class="step-content">
-                        <h3>Receba na sua empresa</h3>
+                        <<h3>Receba na sua empresa</h3>
                         <p>Seu pedido chega com frete grátis, pronto para vestir sua equipe.</p>
                     </div>
                 </div>
@@ -659,7 +725,7 @@
         <div class="container">
             <h2 class="section-title">Pronto para uniformizar sua equipe com qualidade superior?</h2>
             <p>Fale com nosso time pelo WhatsApp e receba sua cotação personalizada. Atendimento rápido e consultoria sem compromisso.</p>
-            <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Gostaria de solicitar um orçamento para uniformes corporativos." class="cta-primary">
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary">
                 <span>💬</span> Solicitar Orçamento no WhatsApp
             </a>
             <div class="cta-info">Pedido mínimo de 50 peças • Parcelamento em até 3x sem juros • Frete grátis</div>
@@ -677,7 +743,7 @@
             
             <div class="footer-col">
                 <h4>Contato</h4>
-                <p><strong>WhatsApp:</strong> (XX) XXXXX-XXXX</p>
+                <p><strong>WhatsApp:</strong> (48) 98806-4667</p>
                 <p style="margin-top: 1rem;">Atendimento de segunda a sexta<br>Das 9h às 18h</p>
             </div>
             
@@ -696,7 +762,7 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Gostaria de solicitar um orçamento para uniformes corporativos." class="whatsapp-float" title="Fale conosco no WhatsApp">
+    <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="whatsapp-float" title="Fale conosco no WhatsApp">
         💬
     </a>
 </body>
