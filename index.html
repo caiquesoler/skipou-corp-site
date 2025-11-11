@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skipou Corp - Uniformes Corporativos de Alto Padrão</title>
+    <meta name="description" content="Uniformes corporativos de alto padrão com tecidos premium e caimento perfeito. 6 anos vestindo empresas de todo o Brasil.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-light-gray: #C8C9C7;
+            --color-gray: #808080;
+            --color-dark-gray: #434345;
+            --color-black: #000000;
+            --color-white: #ffffff;
+            --whatsapp: #25D366;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--color-dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--color-white);
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-black);
+            text-decoration: none;
+        }
+
+        .cta-header {
+            background: var(--whatsapp);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-header:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-gray) 100%);
+            color: var(--color-white);
+            padding: 140px 5% 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--color-light-gray);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            font-weight: 500;
+        }
+
+        .cta-primary {
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 5%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--color-black);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: var(--color-gray);
+            line-height: 1.7;
+        }
+
+        /* Diferenciais */
+        .diferenciais {
+            background: var(--color-white);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: #fafafa;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--color-black);
+        }
+
+        .card p {
+            color: var(--color-gray);
+            line-height: 1.6;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: linear-gradient(135deg, #f8f8f8 0%, #fafafa 100%);
+            text-align: center;
+        }
+
+        .stats {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: var(--color-black);
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+
+        .tag {
+            background: var(--color-white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--color-dark-gray);
+            border: 1px solid var(--color-light-gray);
+        }
+
+        /* Como Funciona */
+        .como-funciona {
+            background: var(--color-white);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--color-light-gray);
+        }
+
+        .step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .step-number {
+            min-width: 60px;
+            height: 60px;
+            background: var(--color-black);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 1;
+        }
+
+        .step-content h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--color-black);
+        }
+
+        .step-content p {
+            color: var(--color-gray);
+            line-height: 1.6;
+        }
+
+        /* Condições */
+        .condicoes {
+            background: linear-gradient(135deg, var(--color-black) 0%, var(--color-dark-gray) 100%);
+            color: var(--color-white);
+        }
+
+        .condicoes .section-title {
+            color: var(--color-white);
+        }
+
+        .condicoes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .condicao-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .condicao-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-light-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .condicao-card p {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .condicao-card .small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-light-gray);
+            margin-top: 0.5rem;
+        }
+
+        /* CTA Final */
+        .cta-final {
+            background: var(--color-white);
+            text-align: center;
+            padding: 100px 5%;
+        }
+
+        .cta-final p {
+            font-size: 1.2rem;
+            color: var(--color-gray);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-info {
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            color: var(--color-gray);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-black);
+            color: var(--color-light-gray);
+            padding: 60px 5% 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--color-white);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-dark-gray);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color-gray);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 5%;
+            }
+
+            .cta-header {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 120px 5% 60px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .step {
+                gap: 1.5rem;
+            }
+
+            .step-number {
+                min-width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .condicoes-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">SKIPOU CORP</a>
+            <a href="#contato" class="cta-header">
+                <span>💬</span> Solicitar Orçamento
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>O uniforme que valoriza sua equipe e eleva sua marca</h1>
+            <p>Uniformes corporativos de alto padrão com tecidos premium, caimento perfeito e acabamento impecável. 6 anos vestindo empresas de todo o Brasil.</p>
+            <a href="#contato" class="cta-primary">
+                <span>💬</span> Solicitar Orçamento no WhatsApp
+            </a>
+            <div class="badge">✓ Mais de 20 mil peças produzidas</div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="diferenciais">
+        <div class="container">
+            <h2 class="section-title">Uniformes que fazem a diferença</h2>
+            <p class="section-subtitle">A maioria dos uniformes corporativos não veste bem, são desconfortáveis e desvalorizam a equipe. Na Skipou Corp, cada peça é pensada para combinar qualidade superior com design que realmente funciona.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">✨</div>
+                    <h3>Tecidos Premium</h3>
+                    <p>Seleção criteriosa de matérias-primas de alta durabilidade, incluindo tecidos importados. Seus uniformes mantêm qualidade lavagem após lavagem.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">👔</div>
+                    <h3>Caimento Perfeito</h3>
+                    <p>Modelagem exclusiva que realmente veste bem. Peças com corte e estrutura que valorizam quem usa — não apenas "servem".</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Produção Ágil</h3>
+                    <p>Entrega em até 15 dias após aprovação. Prazos competitivos sem comprometer a qualidade.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Produção Sustentável</h3>
+                    <p>Fabricação 100% nacional em Maringá-PR, com escolhas conscientes do início ao fim da produção.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">🚚</div>
+                    <h3>Frete Grátis</h3>
+                    <p>Entregamos para todo o Brasil sem custo adicional. Seu pedido chega pronto para vestir sua equipe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Faça como grandes empresas de todo o Brasil</h2>
+            <div class="stats">+20.000</div>
+            <p class="section-subtitle">Peças produzidas para empresas que não abrem mão da qualidade. De e-commerces a produtoras de eventos, nossos uniformes vestem equipes inteiras diariamente.</p>
+            
+            <div class="tags">
+                <span class="tag">Empresas de Eventos</span>
+                <span class="tag">E-commerces</span>
+                <span class="tag">Consultorias</span>
+                <span class="tag">Empresas de Imersão</span>
+                <span class="tag">Startups</span>
+                <span class="tag">Corporações</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="como-funciona">
+        <div class="container">
+            <h2 class="section-title">Processo simples e transparente</h2>
+            
+            <div class="timeline">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Escolha o modelo</h3>
+                        <p>Temos 2 modelos de camisetas de alta qualidade. Selecione o modelo e cor ideal para sua empresa.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Envie sua arte</h3>
+                        <p>Encaminhe seu logotipo ou arte de personalização via WhatsApp. Trabalhamos com estampa DTF de alta definição.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Receba o orçamento</h3>
+                        <p>Enviamos uma proposta detalhada com valores, condições de pagamento e prazo de produção.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Aprove e realize o pagamento</h3>
+                        <p>Após aprovação do orçamento, realize o pagamento para iniciar a produção. Parcelamos em até 3x sem juros.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Aprove o layout</h3>
+                        <p>Você recebe o layout digital da peça personalizada para aprovação final antes da produção.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Produção</h3>
+                        <p>Iniciamos a confecção com nosso padrão de qualidade superior. Prazo de até 30 dias após aprovação do layout.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3>Receba na sua empresa</h3>
+                        <p>Seu pedido chega com frete grátis, pronto para vestir sua equipe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Condições Comerciais -->
+    <section class="condicoes">
+        <div class="container">
+            <h2 class="section-title">Tudo que você precisa saber</h2>
+            
+            <div class="condicoes-grid">
+                <div class="condicao-card">
+                    <h3>Pedido Mínimo</h3>
+                    <p>50 peças</p>
+                </div>
+                
+                <div class="condicao-card">
+                    <h3>Parcelamento</h3>
+                    <p>3x</p>
+                    <div class="small">sem juros</div>
+                </div>
+                
+                <div class="condicao-card">
+                    <h3>Prazo de Produção</h3>
+                    <p>Até 30 dias</p>
+                    <div class="small">Média de 15 dias</div>
+                </div>
+                
+                <div class="condicao-card">
+                    <h3>Frete</h3>
+                    <p>Grátis</p>
+                    <div class="small">Para todo o Brasil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final" id="contato">
+        <div class="container">
+            <h2 class="section-title">Pronto para uniformizar sua equipe com qualidade superior?</h2>
+            <p>Fale com nosso time pelo WhatsApp e receba sua cotação personalizada. Atendimento rápido e consultoria sem compromisso.</p>
+            <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Gostaria de solicitar um orçamento para uniformes corporativos." class="cta-primary">
+                <span>💬</span> Solicitar Orçamento no WhatsApp
+            </a>
+            <div class="cta-info">Pedido mínimo de 50 peças • Parcelamento em até 3x sem juros • Frete grátis</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Skipou Corp</h4>
+                <p>Uniformes corporativos de alto padrão</p>
+                <p style="margin-top: 1rem;">6 anos de experiência vestindo empresas de todo o Brasil. Produção 100% nacional localizada em Maringá-PR.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <p><strong>WhatsApp:</strong> (XX) XXXXX-XXXX</p>
+                <p style="margin-top: 1rem;">Atendimento de segunda a sexta<br>Das 9h às 18h</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Informações</h4>
+                <p>• Pedido mínimo: 50 peças</p>
+                <p>• Prazo de produção: até 30 dias</p>
+                <p>• Frete grátis para todo o Brasil</p>
+                <p style="margin-top: 1rem;">Maringá - PR, Brasil</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 Skipou Corp - CNPJ: 33.433.607/0001-14 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/55SEUNUMEROAQUI?text=Olá! Gostaria de solicitar um orçamento para uniformes corporativos." class="whatsapp-float" title="Fale conosco no WhatsApp">
+        💬
+    </a>
+</body>
+</html>
