@@ -16,6 +16,24 @@
       gtag('config', 'G-1BZXP290MV');
     </script>
     
+    <!-- Event snippet for Clicked WhatsApp Button Pixel conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-11485219599/vehuCI-V2bUZEI-WyuQq',
+            'value': 0.0,
+            'currency': 'BRL',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -545,7 +563,7 @@
             <a href="#" class="logo">
                 <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/logo-skipoucorp-monocromia-positiva-2.png" alt="Skipou Corp" class="logo-img">
             </a>
-            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-header">
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-header" onclick="return gtag_report_conversion(this.href);">
                 <span>💬</span> Solicitar Orçamento
             </a>
         </div>
@@ -556,7 +574,7 @@
         <div class="hero-content">
             <h1>O uniforme que valoriza sua equipe e eleva sua marca</h1>
             <p>Uniformes corporativos de alto padrão com tecidos premium, caimento perfeito e acabamento impecável. 6 anos vestindo empresas de todo o Brasil.</p>
-            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary">
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary" onclick="return gtag_report_conversion(this.href);">
                 <span>💬</span> Solicitar Orçamento no WhatsApp
             </a>
             
@@ -735,7 +753,7 @@
         <div class="container">
             <h2 class="section-title">Pronto para uniformizar sua equipe com qualidade superior?</h2>
             <p>Fale com nosso time pelo WhatsApp e receba sua cotação personalizada. Atendimento rápido e consultoria sem compromisso.</p>
-            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary">
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary" onclick="return gtag_report_conversion(this.href);">
                 <span>💬</span> Solicitar Orçamento no WhatsApp
             </a>
             <div class="cta-info">Pedido mínimo de 50 peças • Parcelamento em até 3x sem juros • Frete grátis</div>
@@ -772,7 +790,7 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="whatsapp-float" title="Fale conosco no WhatsApp">
+    <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="whatsapp-float" title="Fale conosco no WhatsApp" onclick="return gtag_report_conversion(this.href);">
         💬
     </a>
 </body>
