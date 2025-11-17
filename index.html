@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skipou Corp - Uniformes Corporativos de Alto Padrão</title>
-    <meta name="description" content="Uniformes corporativos de alto padrão com tecidos premium e caimento perfeito. 6 anos vestindo empresas de todo o Brasil.">
+    <title>Skipou Corp - Camisetas Corporativas de Alto Padrão</title>
+    <meta name="description" content="Camisetas corporativas personalizadas de alto padrão. Tecidos premium, estampa DTF e frete grátis. Pedido mínimo 50 peças. Produção nacional em Maringá-PR.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/Fav%20Icon%20Skipou%20Corp.png">
@@ -74,13 +74,22 @@
             color: var(--color-black);
             text-decoration: none;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .logo-img {
             height: 20.4px;
             width: auto;
             display: block;
+        }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: var(--color-gray);
+            margin-top: 0.25rem;
+            letter-spacing: 0.02em;
         }
 
         .cta-header {
@@ -408,6 +417,136 @@
             line-height: 1.6;
         }
 
+        /* FAQ Section */
+        .faq {
+            background: #f8f8f8;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-dark-gray);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .faq-answer {
+            color: var(--color-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Formulário */
+        .formulario-orcamento {
+            background: var(--color-white);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-aviso {
+            background: #fff3cd;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+            border-left: 4px solid #ffc107;
+        }
+
+        .form-aviso span {
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .form-aviso p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--color-dark-gray);
+            line-height: 1.5;
+        }
+
+        .form-skipou {
+            background: #fafafa;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-dark-gray);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-dark-gray);
+        }
+
+        .btn-enviar {
+            width: 100%;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.125rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-enviar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .form-disclaimer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-gray);
+            margin-top: 1rem;
+            margin-bottom: 0;
+        }
+
         /* Condições */
         .condicoes {
             background: var(--color-gray);
@@ -574,6 +713,10 @@
                 height: 16.15px;
             }
 
+            .logo-tagline {
+                font-size: 0.6rem;
+            }
+
             .cta-header {
                 padding: 0.6rem 1.2rem;
                 font-size: 0.85rem;
@@ -651,6 +794,10 @@
                 gap: 1.5rem;
             }
 
+            .form-skipou {
+                padding: 1.5rem;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -681,8 +828,9 @@
         <div class="header-content">
             <a href="#" class="logo">
                 <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/logo-skipoucorp-monocromia-positiva-2.png" alt="Skipou Corp" class="logo-img">
+                <span class="logo-tagline">Camisetas Corporativas Personalizadas</span>
             </a>
-            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-header" onclick="gtag('event', 'conversion', {'send_to': 'AW-11485219599/0tWtCLaR8r4bEI-WyuQq', 'value': 1.0, 'currency': 'BRL'});" target="_blank">
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20camisetas%20corporativas." class="cta-header" onclick="gtag('event', 'conversion', {'send_to': 'AW-11485219599/0tWtCLaR8r4bEI-WyuQq', 'value': 1.0, 'currency': 'BRL'});" target="_blank">
                 <svg class="whatsapp-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                 Solicitar Orçamento
             </a>
@@ -692,23 +840,23 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>O uniforme que valoriza sua equipe e eleva sua marca</h1>
-            <p>Uniformes corporativos de alto padrão com tecidos premium, caimento e acabamento impecável. 6 anos vestindo empresas de todo o Brasil.</p>
-            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-11485219599/0tWtCLaR8r4bEI-WyuQq', 'value': 1.0, 'currency': 'BRL'});" target="_blank">
+            <h1>Camisetas corporativas de alto padrão que valorizam sua equipe</h1>
+            <p>Personalizadas com a identidade da sua marca. Tecidos premium, caimento perfeito e acabamento impecável. 6 anos vestindo empresas de todo o Brasil.</p>
+            <a href="#formulario" class="cta-primary">
                 <svg class="whatsapp-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                Solicitar Orçamento no WhatsApp
+                Solicitar Orçamento
             </a>
             
             <!-- Galeria de Imagens -->
             <div class="hero-gallery">
                 <div class="hero-gallery-item">
-                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/1.png" alt="Equipe usando uniformes Skipou Corp">
+                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/1.png" alt="Equipe usando camisetas Skipou Corp">
                 </div>
                 <div class="hero-gallery-item">
-                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/2.png" alt="Profissionais com uniformes corporativos">
+                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/2.png" alt="Profissionais com camisetas corporativas">
                 </div>
                 <div class="hero-gallery-item">
-                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/3.png" alt="Evento corporativo com uniformes">
+                    <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/3.png" alt="Evento corporativo com camisetas personalizadas">
                 </div>
             </div>
         </div>
@@ -717,8 +865,8 @@
     <!-- Diferenciais -->
     <section class="diferenciais">
         <div class="container">
-            <h2 class="section-title">Uniformes que fazem a diferença</h2>
-            <p class="section-subtitle">A maioria dos uniformes corporativos não vestem bem, são desconfortáveis e desvalorizam a equipe. Na Skipou Corp, cada peça é pensada para combinar qualidade superior com design que impressiona.</p>
+            <h2 class="section-title">Camisetas corporativas que fazem a diferença</h2>
+            <p class="section-subtitle">A maioria das camisetas corporativas não vestem bem, são desconfortáveis e desvalorizam a equipe. Na Skipou Corp, cada peça é pensada para combinar qualidade superior com design que realmente funciona.</p>
             
             <div class="cards-grid">
                 <div class="card">
@@ -731,7 +879,7 @@
                         </svg>
                     </div>
                     <h3>Tecidos Premium</h3>
-                    <p>Seleção criteriosa de matérias-primas de alta durabilidade, incluindo tecidos importados. Seus uniformes mantêm qualidade lavagem após lavagem.</p>
+                    <p>Seleção criteriosa de matérias-primas de alta durabilidade, incluindo tecidos importados. Suas camisetas mantêm qualidade lavagem após lavagem.</p>
                 </div>
                 
                 <div class="card">
@@ -786,7 +934,7 @@
         <div class="container">
             <h2 class="section-title">Faça como grandes empresas de todo o Brasil</h2>
             <div class="stats">+20.000</div>
-            <p class="section-subtitle">Peças produzidas para empresas que não abrem mão da qualidade. De e-commerces a produtoras de eventos, nossos uniformes vestem equipes inteiras diariamente.</p>
+            <p class="section-subtitle">Camisetas produzidas para empresas que não abrem mão da qualidade. De e-commerces a produtoras de eventos, nossas camisetas vestem equipes inteiras diariamente.</p>
             
             <div class="tags">
                 <span class="tag">Empresas de Eventos</span>
@@ -874,6 +1022,137 @@
         </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <p class="section-subtitle">Tire suas dúvidas sobre nossos produtos e serviços</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <span>Vocês fazem polo ou camisa social?</span>
+                    </div>
+                    <div class="faq-answer">
+                        No momento trabalhamos exclusivamente com camisetas personalizadas (2 modelos: Premium em viscose com elastano e Básica em algodão 100%). Estamos desenvolvendo novos produtos para o futuro.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <span>Qual a diferença entre Premium e Básica?</span>
+                    </div>
+                    <div class="faq-answer">
+                        <strong>Premium:</strong> viscose com elastano (94% / 6%), 190 g/m², toque gelado, mais durável, não desbota.<br>
+                        <strong>Básica:</strong> 100% algodão, 170 g/m², conforto natural, respirabilidade, ótimo custo-benefício.<br>
+                        Veja especificações completas no catálogo.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <span>Consigo encomendar menos de 50 peças?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Nosso pedido mínimo é de 50 peças para manter a qualidade premium e preços competitivos que oferecemos.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <span>Quanto tempo leva a produção?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Até 30 dias após aprovação do layout. Nossa média real de entrega é de 15 dias. O prazo pode variar conforme a complexidade do pedido.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <span>Como funciona a personalização?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Trabalhamos com estampa DTF de alta definição. Você pode personalizar frente, costas e/ou mangas com seu logotipo. O layout é enviado para aprovação antes da produção.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>❓</span>
+                        <span>Vocês entregam para todo o Brasil?</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Entregamos para todo o Brasil com frete grátis em pedidos a partir de 100 peças. Para pedidos de 50-99 peças, o frete é calculado conforme o CEP de destino.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Orçamento -->
+    <section class="formulario-orcamento" id="formulario">
+        <div class="container">
+            <h2 class="section-title">Solicite seu Orçamento</h2>
+            <p class="section-subtitle">Resposta em até 2 horas úteis • Sem compromisso</p>
+            
+            <div class="form-container">
+                <div class="form-aviso">
+                    <span>ℹ️</span>
+                    <p><strong>Atenção:</strong> Trabalhamos com camisetas corporativas personalizadas (Premium e Básica). Pedido mínimo: 50 peças.</p>
+                </div>
+                
+                <form action="https://formsubmit.co/contato@skipoucorp.com.br" method="POST" class="form-skipou">
+                    
+                    <!-- Configurações FormSubmit -->
+                    <input type="hidden" name="_subject" value="🔔 NOVO LEAD - Skipou Corp">
+                    <input type="hidden" name="_next" value="https://skipoucorp.com.br/#obrigado">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    
+                    <div class="form-group">
+                        <label>Nome completo*</label>
+                        <input type="text" name="Nome" required placeholder="Seu nome completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>WhatsApp*</label>
+                        <input type="tel" name="WhatsApp" placeholder="(44) 99999-9999" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Nome da empresa*</label>
+                        <input type="text" name="Empresa" required placeholder="Nome da sua empresa">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Quantidade aproximada*</label>
+                        <select name="Quantidade" required>
+                            <option value="">Selecione...</option>
+                            <option value="50-99 peças">50-99 peças</option>
+                            <option value="100-199 peças">100-199 peças</option>
+                            <option value="200-399 peças">200-399 peças</option>
+                            <option value="400+ peças">400+ peças</option>
+                            <option value="Ainda não sei">Ainda não sei</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">
+                        Enviar Solicitação
+                    </button>
+                    
+                    <p class="form-disclaimer">
+                        * Campos obrigatórios • Seus dados estão seguros conosco
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Condições Comerciais -->
     <section class="condicoes">
         <div class="container">
@@ -898,6 +1177,7 @@
                 <div class="condicao-card">
                     <h3>Frete</h3>
                     <p>Grátis para todo o Brasil</p>
+                    <div class="small">A partir de 100 peças</div>
                 </div>
             </div>
         </div>
@@ -908,7 +1188,7 @@
         <div class="container">
             <h2 class="section-title">Pronto para uniformizar sua equipe com qualidade superior?</h2>
             <p>Fale com nosso time pelo WhatsApp e receba sua cotação personalizada. Atendimento rápido e consulta sem compromisso.</p>
-            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="cta-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-11485219599/0tWtCLaR8r4bEI-WyuQq', 'value': 1.0, 'currency': 'BRL'});" target="_blank">
+            <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20camisetas%20corporativas." class="cta-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-11485219599/0tWtCLaR8r4bEI-WyuQq', 'value': 1.0, 'currency': 'BRL'});" target="_blank">
                 <svg class="whatsapp-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                 Solicitar Orçamento no WhatsApp
             </a>
@@ -921,14 +1201,14 @@
         <div class="footer-content">
             <div class="footer-col">
                 <h4>Skipou Corp</h4>
-                <p>Uniformes corporativos de alto padrão</p>
+                <p>Camisetas corporativas de alto padrão</p>
                 <p style="margin-top: 1rem;">6 anos de experiência vestindo empresas de todo o Brasil. <span style="white-space: nowrap;">Produção 100% nacional localizada em Maringá-PR.</span></p>
             </div>
             
             <div class="footer-col">
                 <h4>Contato</h4>
                 <p><strong style="color: var(--color-white);">WhatsApp:</strong> <span style="color: var(--color-white);">(48) 98806-4667</span></p>
-                <p style="margin-top: 1rem;">Atendimento de segunda à sexta-feira<br>Das 9h às 18h</p>
+                <p style="margin-top: 1rem;">Atendimento de segunda a sexta-feira<br>Das 9h às 18h</p>
             </div>
         </div>
         
@@ -938,7 +1218,7 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uniformes%20corporativos." class="whatsapp-float" title="Fale conosco no WhatsApp" onclick="gtag('event', 'conversion', {'send_to': 'AW-11485219599/0tWtCLaR8r4bEI-WyuQq', 'value': 1.0, 'currency': 'BRL'});" target="_blank">
+    <a href="https://wa.me/5548988064667?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20camisetas%20corporativas." class="whatsapp-float" title="Fale conosco no WhatsApp" onclick="gtag('event', 'conversion', {'send_to': 'AW-11485219599/0tWtCLaR8r4bEI-WyuQq', 'value': 1.0, 'currency': 'BRL'});" target="_blank">
         <svg class="whatsapp-icon" style="width: 28px; height: 28px;" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
     </a>
 </body>
