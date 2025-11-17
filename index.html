@@ -74,8 +74,7 @@
             color: var(--color-black);
             text-decoration: none;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
         }
 
         .logo-img {
@@ -84,16 +83,8 @@
             display: block;
         }
 
-        .logo-tagline {
-            font-size: 0.65rem;
-            font-weight: 400;
-            color: var(--color-gray);
-            margin-top: 0.25rem;
-            letter-spacing: 0.02em;
-        }
-
         .cta-header {
-            background: var(--color-dark-gray);
+            background: var(--whatsapp);
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
@@ -109,7 +100,6 @@
 
         .cta-header:hover {
             transform: translateY(-2px);
-            background: var(--color-black);
         }
 
         /* Hero Section */
@@ -229,7 +219,7 @@
         }
 
         .cta-primary {
-            background: var(--color-dark-gray);
+            background: var(--whatsapp);
             color: white;
             padding: 1.2rem 3rem;
             border-radius: 50px;
@@ -240,27 +230,14 @@
             align-items: center;
             gap: 0.7rem;
             transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(67, 67, 69, 0.2);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
             margin-top: 2.5rem;
             cursor: pointer;
         }
 
         .cta-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(67, 67, 69, 0.3);
-            background: var(--color-black);
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            margin-top: 2rem;
-            font-weight: 500;
-            color: var(--color-dark-gray);
-            border: 1px solid rgba(200, 201, 199, 0.5);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
         }
 
         /* Section Styles */
@@ -297,21 +274,9 @@
 
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 3rem;
-        }
-        
-        .cards-grid .card {
-            grid-column: span 2;
-        }
-        
-        .cards-grid .card:nth-child(4) {
-            grid-column: 2 / 4;
-        }
-        
-        .cards-grid .card:nth-child(5) {
-            grid-column: 4 / 6;
         }
 
         .card {
@@ -417,61 +382,7 @@
             border: 1px solid var(--color-light-gray);
         }
 
-        /* Como Funciona */
-        .como-funciona {
-            background: var(--color-white);
-        }
-
-        .timeline {
-            max-width: 800px;
-            margin: 3rem auto 0;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--color-light-gray);
-        }
-
-        .step {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .step-number {
-            min-width: 60px;
-            height: 60px;
-            background: var(--color-dark-gray);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            z-index: 1;
-        }
-
-        .step-content h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--color-dark-gray);
-        }
-
-        .step-content p {
-            color: var(--color-gray);
-            line-height: 1.6;
-        }
-
-        /* FAQ Section */
+        /* FAQ Section - Accordion Style */
         .faq {
             background: #f8f8f8;
         }
@@ -483,30 +394,39 @@
 
         .faq-item {
             background: white;
-            padding: 2rem;
             border-radius: 12px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
         }
 
         .faq-question {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--color-dark-gray);
-            margin-bottom: 0.8rem;
+            padding: 1.5rem 2rem;
+            cursor: pointer;
             display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.3s ease;
         }
 
-        .faq-icon {
+        .faq-question:hover {
+            background: #f9f9f9;
+        }
+
+        .faq-arrow {
             width: 24px;
             height: 24px;
+            transition: transform 0.3s ease;
             flex-shrink: 0;
-            margin-top: 2px;
+            margin-left: 1rem;
         }
 
-        .faq-icon svg {
+        .faq-arrow svg {
             width: 24px;
             height: 24px;
             stroke: var(--color-dark-gray);
@@ -514,10 +434,23 @@
             stroke-width: 2;
         }
 
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+
         .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
             color: var(--color-gray);
             line-height: 1.7;
             font-size: 1.05rem;
+            padding: 0 2rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 2rem 1.5rem 2rem;
         }
 
         /* Formulário */
@@ -591,7 +524,7 @@
 
         .btn-enviar {
             width: 100%;
-            background: var(--color-dark-gray);
+            background: var(--whatsapp);
             color: white;
             padding: 1.125rem;
             border: none;
@@ -600,13 +533,12 @@
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(67, 67, 69, 0.2);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
         .btn-enviar:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(67, 67, 69, 0.3);
-            background: var(--color-black);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
         .form-disclaimer {
@@ -722,10 +654,6 @@
                 height: 16.15px;
             }
 
-            .logo-tagline {
-                font-size: 0.6rem;
-            }
-
             .cta-header {
                 padding: 0.6rem 1.2rem;
                 font-size: 0.85rem;
@@ -779,28 +707,18 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
-            
-            .cards-grid .card {
-                grid-column: auto;
-            }
-            
-            .cards-grid .card:nth-child(4),
-            .cards-grid .card:nth-child(5) {
-                grid-column: auto;
+
+            .faq-question {
+                font-size: 1rem;
+                padding: 1.25rem 1.5rem;
             }
 
-            .timeline::before {
-                left: 20px;
+            .faq-answer {
+                font-size: 0.95rem;
             }
 
-            .step {
-                gap: 1.5rem;
-            }
-
-            .step-number {
-                min-width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+            .faq-item.active .faq-answer {
+                padding: 0 1.5rem 1.25rem 1.5rem;
             }
 
             .form-skipou {
@@ -830,7 +748,6 @@
         <div class="header-content">
             <a href="#" class="logo">
                 <img src="https://raw.githubusercontent.com/caiquesoler/skipou-corp-site/main/images/logo-skipoucorp-monocromia-positiva-2.png" alt="Skipou Corp" class="logo-img">
-                <span class="logo-tagline">Camisetas Corporativas Personalizadas</span>
             </a>
             <a href="#formulario" class="cta-header">
                 Solicitar Orçamento
@@ -905,8 +822,6 @@
             <a href="#formulario" class="cta-primary">
                 Solicitar Orçamento
             </a>
-            
-            <div class="badge">✓ Mais de 20 mil camisetas produzidas</div>
         </div>
     </section>
 
@@ -944,34 +859,11 @@
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Produção Ágil</h3>
-                    <p>Envio em até 30 dias após aprovação do layout. Prazos competitivos sem comprometer a qualidade.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 22V12M12 12C12 7 8 4 3 4C3 4 4 9 8 12M12 12C12 7 16 4 21 4C21 4 20 9 16 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <h3>Produção Sustentável</h3>
                     <p>Fabricação 100% nacional em Maringá-PR, com escolhas conscientes do início ao fim da produção.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 3H1V16H16V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 8H20L23 11V16H16V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3>Frete Grátis</h3>
-                    <p>Entregamos para todo o Brasil sem custo adicional a partir de 100 peças. Seu pedido chega pronto para vestir sua equipe.</p>
                 </div>
             </div>
         </div>
@@ -1005,72 +897,7 @@
         </div>
     </section>
 
-    <!-- Como Funciona -->
-    <section class="como-funciona">
-        <div class="container">
-            <h2 class="section-title">Processo simples e transparente</h2>
-            
-            <div class="timeline">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Escolha o modelo</h3>
-                        <p>Temos 2 modelos de camisetas de alta qualidade. Selecione o modelo e cor ideal para sua empresa.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Envie sua arte</h3>
-                        <p>Encaminhe seu logotipo ou arte de personalização via WhatsApp. Trabalhamos com estampa serigrafia de alta qualidade.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Receba o orçamento</h3>
-                        <p>Enviamos uma proposta detalhada com valores, condições de pagamento e prazo de produção.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Aprove e realize o pagamento</h3>
-                        <p>Após aprovação do orçamento, realize o pagamento para iniciar a produção. Parcelamos em até 3x sem juros.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3>Aprove o layout</h3>
-                        <p>Você recebe o layout digital da peça personalizada para aprovação final antes da produção.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">6</div>
-                    <div class="step-content">
-                        <h3>Produção</h3>
-                        <p>Iniciamos a confecção com nosso padrão de qualidade superior. Prazo de até 30 dias após aprovação do layout.</p>
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">7</div>
-                    <div class="step-content">
-                        <h3>Receba na sua empresa</h3>
-                        <p>Seu pedido chega com frete grátis (100+ peças), pronto para vestir sua equipe.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
+    <!-- FAQ - Accordion Style -->
     <section class="faq">
         <div class="container">
             <h2 class="section-title">Perguntas Frequentes</h2>
@@ -1079,14 +906,12 @@
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <div class="faq-icon">
+                        <span>Quais produtos vocês fazem?</span>
+                        <div class="faq-arrow">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                <polyline points="6 9 12 15 18 9"/>
                             </svg>
                         </div>
-                        <span>Quais produtos vocês fazem?</span>
                     </div>
                     <div class="faq-answer">
                         Trabalhamos exclusivamente com camisetas corporativas personalizadas. Oferecemos 2 modelos: Premium em viscose com elastano e Básica em algodão. Estamos desenvolvendo novos produtos para o futuro.
@@ -1095,14 +920,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <div class="faq-icon">
+                        <span>Qual a diferença entre Premium e Básica?</span>
+                        <div class="faq-arrow">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                <polyline points="6 9 12 15 18 9"/>
                             </svg>
                         </div>
-                        <span>Qual a diferença entre Premium e Básica?</span>
                     </div>
                     <div class="faq-answer">
                         <strong>Premium:</strong> viscose com elastano, toque gelado, mais durável, não desbota.<br>
@@ -1113,14 +936,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <div class="faq-icon">
+                        <span>Consigo encomendar menos de 50 peças?</span>
+                        <div class="faq-arrow">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                <polyline points="6 9 12 15 18 9"/>
                             </svg>
                         </div>
-                        <span>Consigo encomendar menos de 50 peças?</span>
                     </div>
                     <div class="faq-answer">
                         Nosso pedido mínimo é de 50 peças para manter a qualidade premium e preços competitivos que oferecemos.
@@ -1129,14 +950,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <div class="faq-icon">
+                        <span>Quanto tempo leva a produção?</span>
+                        <div class="faq-arrow">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                <polyline points="6 9 12 15 18 9"/>
                             </svg>
                         </div>
-                        <span>Quanto tempo leva a produção?</span>
                     </div>
                     <div class="faq-answer">
                         Até 30 dias após aprovação do layout. O prazo pode variar conforme a complexidade do pedido.
@@ -1145,14 +964,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <div class="faq-icon">
+                        <span>Como funciona a personalização?</span>
+                        <div class="faq-arrow">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                <polyline points="6 9 12 15 18 9"/>
                             </svg>
                         </div>
-                        <span>Como funciona a personalização?</span>
                     </div>
                     <div class="faq-answer">
                         Trabalhamos com estampa serigrafia de alta qualidade. Você pode personalizar frente, costas e/ou mangas com seu logotipo. O layout é enviado para aprovação antes da produção.
@@ -1161,14 +978,12 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <div class="faq-icon">
+                        <span>Vocês entregam para todo o Brasil?</span>
+                        <div class="faq-arrow">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                                <polyline points="6 9 12 15 18 9"/>
                             </svg>
                         </div>
-                        <span>Vocês entregam para todo o Brasil?</span>
                     </div>
                     <div class="faq-answer">
                         Sim! Entregamos para todo o Brasil com frete grátis em pedidos a partir de 100 peças. Para pedidos de 50-99 peças, o frete é calculado conforme o CEP de destino.
@@ -1267,8 +1082,9 @@
         </div>
     </footer>
 
-    <!-- JavaScript para Formulário -->
+    <!-- JavaScript para Formulário e Accordion -->
     <script>
+        // Formulário
         const form = document.getElementById('orcamento-form');
         const successMessage = document.getElementById('success-message');
 
@@ -1306,6 +1122,25 @@
             .catch(error => {
                 console.error('Erro:', error);
                 alert('Erro ao enviar formulário. Por favor, tente novamente.');
+            });
+        });
+
+        // Accordion FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Fecha outros itens
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle item atual
+                item.classList.toggle('active');
             });
         });
     </script>
